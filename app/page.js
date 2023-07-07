@@ -1,7 +1,11 @@
+import FetchPost from "@/components/FetchPost";
+
 export default function Home() {
   return (
     <>
-      <div>Hello</div>
+      <div>
+        <FetchPost />
+      </div>
     </>
   );
 }
