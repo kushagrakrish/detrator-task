@@ -1,22 +1,18 @@
 "use client";
 
-import * as React from "react";
+import MailIcon from "@mui/icons-material/Mail";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
 import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
+import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
+import Toolbar from "@mui/material/Toolbar";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const Sidebar = () => {
   return (
@@ -25,7 +21,7 @@ const Sidebar = () => {
       <Drawer
         sx={{
           width: drawerWidth,
-          flexShrink: 0,
+          flexShrink: 1,
           "& .MuiDrawer-paper": {
             width: drawerWidth,
             boxSizing: "border-box",
@@ -36,7 +32,7 @@ const Sidebar = () => {
       >
         <Toolbar />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["Home", "Search", "Post", "Live"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
@@ -47,9 +43,9 @@ const Sidebar = () => {
             </ListItem>
           ))}
         </List>
-        <Divider />
+        <Box sx={{ flexGrow: 1 }} />
         <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
+          {["Log Out"].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
