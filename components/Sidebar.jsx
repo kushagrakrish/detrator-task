@@ -11,11 +11,22 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import "../components/sidebar.css";
 
+import MailIcon from "@mui/icons-material/Mail";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import { Avatar } from "@mui/material";
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import "../components/sidebar.css";
+
 const Sidebar = ({ children }) => {
   return (
     <>
+      {/* This is for rendering the first sidebar with User profile and username */}
       <div className='sidebar-container'>
-        {/* Sidebar2 */}
         <div className='sidebar-2'>
           <Avatar
             alt='Remy Sharp'
@@ -25,7 +36,7 @@ const Sidebar = ({ children }) => {
           />
           <h1 className='username'>Kushagra Krishna</h1>
         </div>
-
+        {/* This div for rendering the other sidebar which has menu items */}
         <div className='sidebar-1'>
           <List>
             {["Home", "Search", "Post", "Live"].map((text, index) => (
@@ -43,7 +54,6 @@ const Sidebar = ({ children }) => {
               </ListItem>
             ))}
           </List>
-
           <Box sx={{ flexGrow: 1 }} />
           <ListItem disablePadding>
             <ListItemButton style={{ color: "#1d0075", fontWeight: "600" }}>
@@ -55,7 +65,7 @@ const Sidebar = ({ children }) => {
           </ListItem>
         </div>
       </div>
-      <div>{children}</div>
+      {children}
     </>
   );
 };
