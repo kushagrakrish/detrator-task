@@ -19,7 +19,8 @@ const Sidebar = ({ children }) => {
         <div className='sidebar-2'>
           <Avatar
             alt='Remy Sharp'
-            src='/static/images/avatar/1.jpg'
+            src='https://www.gravatar.com/avatar/2c7d99fe281ecd3bcd65ab915bac6dd5?s=250'
+            sx={{ width: 56, height: 56 }}
             style={{ margin: "10px auto" }}
           />
           <h1 className='username'>Kushagra Krishna</h1>
@@ -28,9 +29,13 @@ const Sidebar = ({ children }) => {
         <div className='sidebar-1'>
           <List>
             {["Home", "Search", "Post", "Live"].map((text, index) => (
-              <ListItem key={text} disablePadding>
+              <ListItem
+                key={text}
+                disablePadding
+                style={{ color: "#1d0075", fontWeight: "600" }}
+              >
                 <ListItemButton>
-                  <ListItemIcon>
+                  <ListItemIcon style={{ color: "#1d0075", fontWeight: "600" }}>
                     {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                   </ListItemIcon>
                   <ListItemText primary={text} />
@@ -40,18 +45,14 @@ const Sidebar = ({ children }) => {
           </List>
 
           <Box sx={{ flexGrow: 1 }} />
-          <List>
-            {["Log Out"].map((text, index) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-          </List>
+          <ListItem disablePadding>
+            <ListItemButton style={{ color: "#1d0075", fontWeight: "600" }}>
+              <ListItemIcon>
+                <InboxIcon style={{ color: "#1d0075", fontWeight: "600" }} />
+              </ListItemIcon>
+              <ListItemText primary='Log Out' />
+            </ListItemButton>
+          </ListItem>
         </div>
       </div>
       <div>{children}</div>

@@ -3,7 +3,7 @@
   font-weight: bold;
   padding: 30px 0;
   text-align: center;
-  color: rgb(30, 0, 118);
+  color: #1d0075;
 }
 
 .card {
@@ -76,4 +76,27 @@
   width: 100%;
   gap: 20px;
   padding: 0 30px;
+}
+
+@media screen and (max-width: 430px) {
+  .card-heading {
+    font-size: 18px;
+  }
+  .card-image {
+    width: 100px;
+  }
+
+  .card-desc {
+    font-size: 14px;
+  }
+  .category {
+    font-size: 16px;
+  }
+
+  .rating {
+    font-size: 18px;
+  }
+  .price {
+    font-size: 18px;
+  }
 }
