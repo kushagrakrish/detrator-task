@@ -37,11 +37,14 @@ const FetchPost = () => {
               <div className='card-description'>
                 <h1 className='card-heading'>{post?.title}</h1>
                 <p className='card-desc'>
-                  {" "}
                   {truncateDescription(post?.description, 150)}
                 </p>
                 <h2 className='category'>
                   Category: <span>{post?.category}</span>
+                </h2>
+                <h2 className='rating'>
+                  Ratings:
+                  <span>{post?.rating?.rate}</span>
                 </h2>
                 <h3 className='price'>
                   Price: <span>$ {post?.price}</span>
