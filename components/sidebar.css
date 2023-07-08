@@ -40,9 +40,9 @@
 @media screen and (max-width: 430px) {
   .sidebar-2 {
     width: 80px;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .username {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
